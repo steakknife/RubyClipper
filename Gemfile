@@ -42,3 +42,20 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'figaro'
+gem 'foundation-rails', '5.0.3.1'
+gem 'haml-rails'
+gem 'high_voltage'
+gem 'puma'
+gem 'simple_form'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
