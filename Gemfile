@@ -27,6 +27,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # web frameworks
 gem 'foundation-rails', '5.0.3.1'
 
+# auth
+gem 'omniauth'
+gem 'omniauth-github'
+#gem 'omniauth-github'
+#gem 'omniauth-bitbucket'
+
 # controller 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
