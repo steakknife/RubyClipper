@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140223140938) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "users", force: true do |t|
+  create_table "users", id: :uuid, default: "uuid_generate_v1()", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "provider"
