@@ -1,7 +1,8 @@
 class CreateUsers < ActiveRecord::Migration
   def change
-    create_table :users, id: false do |t|
-      t.primary_key :id, :uuid, default: 'uuid_generate_v1()'
+    #create_table :users, id: false do |t|
+    create_table :users, id: :uuid do |t|
+    #  t.primary_key :id, :uuid, default: 'uuid_generate_v1()'
       t.string :name
       t.string :email
       t.timestamps

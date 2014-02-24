@@ -1,5 +1,6 @@
 class Authorization < ActiveRecord::Base
-  belongs_to :user, dependent: :destroy
-  validates_presence_of :provider
-  validates_presence_of :uid
+  validates :provider, presence: true
+  validates :uid, presence: true
+
+  belongs_to :user
 end

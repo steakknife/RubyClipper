@@ -1,9 +1,15 @@
 class User < ActiveRecord::Base
-  validates_presence_of :name
-  validates_presence_of :email
-  validates_uniqueness_of :email
+  # note: id is uuid, so first and last wont work
+  # scope :first, -> { order('created_at').first }
+  # scope :last, -> { order('created_at DESC').first }
+  
+  # name: string
+  validates :name, presence: true, length: { maximum: 145 }
 
-  has_many :authorizations
+  # email: string
+  validates :email, presence: true, uniqueness: true, length: { maximum: 200 }, email: true
+
+  has_many :authorizations, dependent: :destroy
 
   class AuthInfo
     attr_reader :auth_hash

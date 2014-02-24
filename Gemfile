@@ -26,6 +26,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # web frameworks
 gem 'foundation-rails', '5.0.3.1'
+#gem 'foundation_rails_helper' # replaces form_for
 
 # assets
 gem 'font-awesome-rails'
@@ -36,22 +37,30 @@ gem 'omniauth-github' # https://github.com/settings/applications
 gem 'omniauth-bitbucket' # https://bitbucket.org/account/user/{{username}}/api
 gem 'omniauth-google-oauth2' # https://cloud.google.com/console
 gem 'omniauth-twitter' # https://apps.twitter.com/app
-gem 'omniauth-facebook' # 
+gem 'omniauth-facebook' # https://developer.facebook.com
 
 # controller 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-# configuration
-gem 'figaro'
-gem 'high_voltage'
+# misc
+gem 'figaro' # env var config via config/application.yml 
+gem 'high_voltage' # static pages app/views/pages
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
-  gem 'html2haml'
+  gem 'html2haml', require: nil
   gem 'hub', require: nil
   gem 'quiet_assets'
   gem 'rails_layout'
+end
+
+group :development, :test do
   gem 'pry-rails'
+
+  gem 'rspec', require: nil
+  gem 'rspec-rails', '~> 3.0.0.beta', require: nil
+  gem 'rspec-collection_matchers', require: nil
+  gem 'respec', require: nil
 end

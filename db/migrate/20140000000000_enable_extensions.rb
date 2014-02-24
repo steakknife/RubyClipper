@@ -1,8 +1,5 @@
 class EnableExtensions < ActiveRecord::Migration
-  def self.up
+  def change
     enable_extension 'uuid-ossp'
-  end
-  def self.down
-    disable_extension 'uuid-ossp'
   end
 end
