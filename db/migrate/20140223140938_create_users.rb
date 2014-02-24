@@ -4,11 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.primary_key :id, :uuid, default: 'uuid_generate_v1()'
       t.string :name
       t.string :email
-      t.string :provider
-      t.string :uid
       t.timestamps
     end
-    add_index :users, :email, unique: true
-    add_index :users, :uid
+    add_index :users, :email
   end
 end

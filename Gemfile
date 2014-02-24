@@ -29,9 +29,9 @@ gem 'foundation-rails', '5.0.3.1'
 
 # auth
 gem 'omniauth'
-gem 'omniauth-github'
-#gem 'omniauth-github'
-#gem 'omniauth-bitbucket'
+gem 'omniauth-github' # https://github.com/settings/applications
+gem 'omniauth-bitbucket' # https://bitbucket.org/account/user/{{username}}/api
+gem 'omniauth-google-oauth2' # https://cloud.google.com/console
 
 # controller 
 gem 'turbolinks'
@@ -43,7 +43,7 @@ gem 'high_voltage'
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :rbx]
+  gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
   gem 'html2haml'
   gem 'hub', require: nil
   gem 'quiet_assets'
