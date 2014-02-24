@@ -27,11 +27,16 @@ gem 'coffee-rails', '~> 4.0.0'
 # web frameworks
 gem 'foundation-rails', '5.0.3.1'
 
+# assets
+gem 'font-awesome-rails'
+
 # auth
 gem 'omniauth'
 gem 'omniauth-github' # https://github.com/settings/applications
 gem 'omniauth-bitbucket' # https://bitbucket.org/account/user/{{username}}/api
 gem 'omniauth-google-oauth2' # https://cloud.google.com/console
+gem 'omniauth-twitter' # https://apps.twitter.com/app
+gem 'omniauth-facebook' # 
 
 # controller 
 gem 'turbolinks'
